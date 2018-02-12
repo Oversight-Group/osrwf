@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OsRwf</name>
+    </assembly>
+    <members>
+        <member name="T:OSResWinForms.RWF">
+            <summary>
+            Provides initialization methods for WinForms responsiveness.
+            </summary>
+        </member>
+        <member name="P:OSResWinForms.RWF.DesignTimeResolution">
+            <summary>
+            Screen resolution at design time.
+            </summary>
+        </member>
+        <member name="P:OSResWinForms.RWF.UserResolution">
+            <summary>
+            Screen resolution of the user.
+            </summary>
+        </member>
+        <member name="P:OSResWinForms.RWF.MulFac">
+            <summary>
+            Multiplication factor for resizing controls.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RWF.Fixes">
+            <summary>
+            Flags for additional fixes.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RWF.ResponsiveObjects">
+            <summary>
+            Collection of responsive controls.
+            </summary>
+        </member>
+        <member name="T:OSResWinForms.RWF.ResFlags">
+            <summary>
+            Responsive WinForms flags for additional effects.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RWF.ResFlags.None">
+            <summary>
+            No effect.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RWF.ResFlags.AutoScroll">
+            <summary>
+            Automatically allow scroll bars for every control which requires it.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RWF.ResFlags.AutoEllipsis">
+            <summary>
+            Automatically allow ellipsis for longer texts with "..." instead of just cutting it.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RWF.ResFlags.AlwaysResize">
+            <summary>
+            By default, controls are resized only when the user finished resizing the window.
+            If AlwaysResize is flagged, the controls will resize on real-time.
+            Note that this process can be slow sometimes, especially on forms containing a lot of controls.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RWF.ResFlags.DisableWhenResize">
+            <summary>
+            Disables the entire window when resizing.
+            </summary>
+        </member>
+        <member name="M:OSResWinForms.RWF.Initialize(System.Drawing.Size,System.Drawing.Rectangle)">
+            <summary>
+            Initialize OsRwf with screen resolution info.
+            </summary>
+            <param name="devRes">Resolution at design-time (developer's screen resolution).</param>
+            <param name="cliRes">Current software user resolution.</param>
+        </member>
+        <member name="M:OSResWinForms.RWF.Initialize(System.Drawing.Size)">
+            <summary>
+            Initialize OsRwf with screen resolution info.
+            User resolution will be checked automatically.
+            </summary>
+            <param name="devRes">Resolution at design-time (developer's screen resolution).</param>
+        </member>
+        <member name="M:OSResWinForms.RWF.Initialize(System.Drawing.Rectangle)">
+            <summary>
+            Initialize OsRwf with screen resolution info.
+            Developer resolution will be checked from the app config file, from appSettings keys: DESIGN_TIME_WIDTH, DESIGN_TIME_HEIGHT.
+            </summary>
+            <param name="cliRes">Current software user resolution.</param>
+        </member>
+        <member name="M:OSResWinForms.RWF.Initialize">
+            <summary>
+            Initialize OsRwf with screen resolution info.
+            Developer resolution will be checked from the app config file, from appSettings keys: DESIGN_TIME_WIDTH, DESIGN_TIME_HEIGHT.
+            User resolution will be checked automatically.
+            </summary>
+        </member>
+        <member name="M:OSResWinForms.RWF.InitializeStep2">
+            <summary>
+            Generates the multiplication factor and the flags array.
+            </summary>
+        </member>
+        <member name="M:OSResWinForms.RWF.GetMetrics(System.Int32,OSResWinForms.RWF.MetricsType)">
+            <summary>
+            Get modified control size based on the multiplication factor.
+            </summary>
+            <param name="val">The original value.</param>
+            <param name="type">Width / Height.</param>
+            <returns>The modified value.</returns>
+        </member>
+        <member name="M:OSResWinForms.RWF.UseResFixFlags(OSResWinForms.RWF.ResFlags)">
+            <summary>
+            Flag additional fixes.
+            </summary>
+            <param name="flags">Fixes to use.</param>
+        </member>
+        <member name="M:OSResWinForms.RWF.ApplyResponsiveness(System.Windows.Forms.Form)">
+            <summary>
+            Applies the responsive form effect.
+            </summary>
+            <param name="f">Form reference.</param>
+            <returns>Responsive form object, bounded to the given form.</returns>
+        </member>
+        <member name="M:OSResWinForms.RWF.GetReponsivenessObject(System.Windows.Forms.Form)">
+            <summary>
+            Gets a responsive form object bounded to a form.
+            </summary>
+            <param name="f">Form reference.</param>
+            <returns>Responsive form object.</returns>
+        </member>
+        <member name="T:OSResWinForms.ResponsiveControlData">
+            <summary>
+            Object used to save responsive control original data.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.ResponsiveControlData.Base">
+            <summary>
+            The original control to base this object on.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.ResponsiveControlData.OriginalSize">
+            <summary>
+            Original control size.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.ResponsiveControlData.OriginalFont">
+            <summary>
+            Original control font data.
+            </summary>
+        </member>
+        <member name="M:OSResWinForms.ResponsiveControlData.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Initializes a struct of responsive control data.
+            </summary>
+            <param name="b">The base control.</param>
+        </member>
+        <member name="M:OSResWinForms.ResponsiveControlData.op_Implicit(System.Windows.Forms.Control)~OSResWinForms.ResponsiveControlData">
+            <summary>
+            Constructs a responsive control data object based on a given control.
+            </summary>
+            <param name="c">The control.</param>
+        </member>
+        <member name="T:OSResWinForms.RForm">
+            <summary>
+            Responsive form data object.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RForm.Form">
+            <summary>
+            The base form.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RForm.ResponsiveFormData">
+            <summary>
+            Responsive control data object for the form itself.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RForm.OriginalWindowState">
+            <summary>
+            Original form data.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RForm.CurrentWindowState">
+            <summary>
+            Original form data.
+            </summary>
+        </member>
+        <member name="F:OSResWinForms.RForm.ResponsiveControlsData">
+            <summary>
+            Collection of responsive control data objects for any control within the form.
+            </summary>
+        </member>
+        <member name="M:OSResWinForms.RForm.#ctor(System.Windows.Forms.Form)">
+            <summary>
+            Constructs an responsive form object bounded to a form.
+            </summary>
+            <param name="form">The form to base the object on.</param>
+        </member>
+        <member name="M:OSResWinForms.RForm.SaveControls(System.Windows.Forms.Control.ControlCollection)">
+            <summary>
+            Saves the original data of the controls.
+            </summary>
+            <param name="cc">Control collection.</param>
+        </member>
+        <member name="M:OSResWinForms.RForm.ResizeControls(System.Windows.Forms.Control.ControlCollection,System.Drawing.SizeF)">
+            <summary>
+            Resizes any control within the collection based on a given ratio.
+            </summary>
+            <param name="cc">Control collection.</param>
+            <param name="ratio">The ratio to base the new size on.</param>
+        </member>
+        <member name="M:OSResWinForms.RForm.ResetControls(System.Windows.Forms.Control.ControlCollection)">
+            <summary>
+            Resets control sizes.
+            </summary>
+            <param name="cc">Control collection.</param>
+        </member>
+    </members>
+</doc>

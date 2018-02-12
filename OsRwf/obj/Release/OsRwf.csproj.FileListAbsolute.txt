@@ -1,0 +1,11 @@
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\bin\Release\OsRwf.dll
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\bin\Release\OsRwf.pdb
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\obj\Release\OsRwf.dll
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\obj\Release\OsRwf.pdb
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\bin\Release\OsRwf.XML
+C:\Users\Amit\Desktop\עמית\פרויקטים\C#\OsRwf\OsRwf\obj\Release\OsRwf.csproj.CoreCompileInputs.cache
+C:\Users\Amit\Desktop\עמית\פרויקטים\C#\OsRwf\OsRwf\obj\Release\OsRwf.dll
+C:\Users\Amit\Desktop\עמית\פרויקטים\C#\OsRwf\OsRwf\obj\Release\OsRwf.pdb
+C:\Users\Amit\Desktop\עמית\פרויקטים\C#\OsRwf\OsRwf\bin\Release\OsRwf.XML
+C:\Users\Amit\Desktop\עמית\פרויקטים\C#\OsRwf\OsRwf\bin\Release\OsRwf.dll
+C:\Users\Amit\Desktop\עמית\פרויקטים\C#\OsRwf\OsRwf\bin\Release\OsRwf.pdb

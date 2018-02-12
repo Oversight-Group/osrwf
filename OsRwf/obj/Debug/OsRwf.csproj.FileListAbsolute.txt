@@ -1,0 +1,4 @@
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\bin\Debug\OsRwf.dll
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\bin\Debug\OsRwf.pdb
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\obj\Debug\OsRwf.dll
+C:\Users\Amit\Desktop\עמית\פרוייקטים\C#\OsRwf\OsRwf\obj\Debug\OsRwf.pdb
